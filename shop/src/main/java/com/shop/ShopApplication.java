@@ -1,13 +1,13 @@
-package com.example.springdemoreal;
+package com.shop;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringDemoRealApplication {
+public class ShopApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringDemoRealApplication.class, args);
+		SpringApplication.run(ShopApplication.class, args);
 	}
 
 }

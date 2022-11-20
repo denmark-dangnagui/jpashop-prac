@@ -1,10 +1,10 @@
-package com.example.springdemoreal;
+package com.shop;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringDemoRealApplicationTests {
+class ShopApplicationTests {
 
 	@Test
 	void contextLoads() {
