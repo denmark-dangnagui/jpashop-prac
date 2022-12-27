@@ -1,8 +1,10 @@
 package com.shop.dto;
 
 import com.shop.constant.ItemSellStatus;
+import com.shop.entity.Item;
 import lombok.Getter;
 import lombok.Setter;
+import org.modelmapper.ModelMapper;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -28,9 +30,18 @@ public class ItemFormDto {
 
     private ItemSellStatus itemSellStatus;
 
+    private List<ItemImgDto> itemImgDtoList = new ArrayList<>();
 
     private List<Long> itemImgIds = new ArrayList<>();
 
+    private static ModelMapper modelMapper = new ModelMapper();
 
+    public Item createItem(){
+        return modelMapper.map(this,Item.class);
+    }
+
+    public static ItemFormDto of(Item item){
+        return modelMapper.map(item, ItemFormDto.class);
+    }
 
 }
